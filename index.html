@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramadhan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">
+                <a href="#"><span>Zr</span>Apriawan</a>
+            </div>
+
+            <div class="tulisan">
+                <h4>Ramadhan 1443H</h4>
+            </div>
+            <button class="btn satu">Find More</button>
+        </header>
+
+        <main>
+            <div class="text">
+                <h3>menuju puasa 2022</h3>
+                <div class="countdown">
+                    <div class="card">
+                        <div id="hari" class="header">
+                            Zr
+                        </div>
+                        <div class="itungan">
+                            <h4>Hari</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div id="jam" class="header">
+                            Zr
+                        </div>
+                        <div class="itungan">
+                            <h4>Jam</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div id="menit" class="header">
+                            Zr
+                        </div>
+                        <div class="itungan">
+                            <h4>Menit</h4>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div id="detik" class="header">
+                            Zr
+                        </div>
+                        <div class="itungan">
+                            <h4>Detik</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <H2>Sucikan <span>Hati</span>
+                    <br>
+                    Bersihkan <span>Galery</span>
+                </H2>
+
+                <p>satu-satunya keadilan yang diberikan pada kita semua <br> adalah <span>kenyataan yang tidak
+                        adil</span></p>
+
+                <button class="btn"
+                    onclick=" alert('stay Halal Brother') ">Mulai
+                </button>
+            </div>
+
+            <img src="gambar/BiruNih.png" alt="Ramadhan">
+        </main>
+
+    </div>
+
+
+    <script>
+        var countDate = new Date('April 1 2022 00:00:00').getTime();
+
+        function newYear() {
+            var now = new Date().getTime();
+            gap = countDate - now;
+
+            var detik = 1000;
+            var menit = detik * 60;
+            var jam = menit * 60;
+            var hari = jam * 24;
+
+            var h = Math.floor(gap / (hari));
+            var j = Math.floor((gap % (hari)) / (jam));
+            var m = Math.floor((gap % (jam) / (menit)));
+            var d = Math.floor((gap % (menit) / (detik)));
+
+            document.getElementById('hari').innerText = h;
+            document.getElementById('jam').innerText = j;
+            document.getElementById('menit').innerText = m;
+            document.getElementById('detik').innerText = d;
+
+        }
+
+        setInterval(function () {
+            newYear();
+        }, 1000);
+    </script>
+</body>
+
+</html>
